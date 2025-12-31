@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻宝游戏</title>
+    <link rel="stylesheet" href="treasureGame.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 游戏标题区域 -->
+        <header class="game-header">
+            <h1 class="game-title">🏴‍☠️ 增强版寻宝大冒险 🏴‍☠️</h1>
+            <p class="game-subtitle">踏上史诗般的寻宝之旅，解开古代谜题，战胜神庙守卫！</p>
+        </header>
+
+        <!-- 游戏控制面板 -->
+        <div class="game-controls">
+            <button id="startGameBtn" class="btn btn-primary">
+                <span class="btn-icon">🎮</span>
+                开始寻宝
+            </button>
+            <button id="restartGameBtn" class="btn btn-secondary" disabled>
+                <span class="btn-icon">🔄</span>
+                重新开始
+            </button>
+        </div>
+
+        <!-- 游戏进度指示器 -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="currentStage">准备开始</span>
+                <span id="progressPercent">0%</span>
+            </div>
+        </div>
+
+        <!-- 游戏主内容区域 -->
+        <div class="game-content">
+            <!-- 故事日志区域 -->
+            <div class="story-container">
+                <h3 class="section-title">📖 冒险日志</h3>
+                <div id="storyLog" class="story-log">
+                    <div class="welcome-message">
+                        <p>🎯 欢迎来到增强版寻宝游戏！</p>
+                        <p>点击"开始寻宝"按钮，踏上你的史诗冒险之旅...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 玩家状态区域 -->
+            <div class="player-status">
+                <div class="player-items">
+                    <h3 class="section-title">🎒 随身物品</h3>
+                    <div id="playerItems" class="items-grid">
+                        <div class="empty-items">暂无物品</div>
+                    </div>
+                </div>
+                
+                <div class="player-stats">
+                    <h3 class="section-title">📊 冒险统计</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">当前阶段:</span>
+                            <span id="playerStage" class="stat-value">准备开始</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">发现物品:</span>
+                            <span id="itemCount" class="stat-value">0 件</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">游戏状态:</span>
+                            <span id="gameStatus" class="stat-value">等待开始</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 加载动画 -->
+        <div id="loadingAnimation" class="loading-overlay" style="display: none;">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p class="loading-text">正在冒险中...</p>
+            </div>
+        </div>
+
+        <!-- 背景装饰 -->
+        <div class="background-elements">
+            <div class="floating-star star1">✨</div>
+            <div class="floating-star star2">⭐</div>
+            <div class="floating-star star3">🌟</div>
+            <div class="floating-star star4">💫</div>
+        </div>
+    </div>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="enhancedTreasureGame.js"></script>
+    <script src="gameUI.js"></script>
+</body>
+</html>
